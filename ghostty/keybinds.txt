@@ -1,0 +1,8 @@
+# Home/End — Windows behavior on Mac
+# Home → beginning of line
+keybind = home=scroll:top
+keybind = shift+home=adjust_selection:scroll:top
+
+# End → end of line
+keybind = end=scroll:bottom
+keybind = shift+end=adjust_selection:scroll:bottom

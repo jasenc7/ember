@@ -1,0 +1,56 @@
+confirm-close-surface = false
+clipboard-paste-bracketed-safe = true
+
+# Ember — generated from palette.toml
+# Do not edit config directly. Edit config.template, then: make ghostty
+
+font-family = "BlexMono Nerd Font Mono"
+font-size = 14
+
+background = #282530
+foreground = #e0dbd5
+cursor-color = #dc9472
+cursor-style = block
+cursor-style-blink = false
+
+selection-background = #3d3748
+selection-foreground = #e0dbd5
+
+# ANSI palette
+palette = 0=#1e1c22
+palette = 1=#dc9472
+palette = 2=#5faa9e
+palette = 3=#e8a682
+palette = 4=#6fbcd4
+palette = 5=#b080cc
+palette = 6=#6fbcd4
+palette = 7=#e0dbd5
+palette = 8=#8a8588
+palette = 9=#e8a682
+palette = 10=#5faa9e
+palette = 11=#dbb45a
+palette = 12=#6fbcd4
+palette = 13=#b080cc
+palette = 14=#6fbcd4
+palette = 15=#eee9e3
+
+bold-is-bright = false
+window-theme = ghostty
+window-padding-x = 14
+window-padding-y = 14
+confirm-close-surface = false
+resize-overlay = never
+
+# Home/End — Windows behavior on Mac
+keybind = home=text:\x01
+keybind = end=text:\x05
+
+keybind = page_up=scroll_page_up
+keybind = page_down=scroll_page_down
+
+keybind = shift+home=scroll_to_top
+keybind = shift+end=scroll_to_bottom
+
+macos-secure-input-indication = false
+
+bell-features = audio

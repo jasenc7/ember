@@ -1,0 +1,49 @@
+{
+  "manifest_version": 2,
+  "version": "0.2.0",
+  "name": "Ember",
+  "description": "Joshua Tree at 4pm on Halloween.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "jasen@jasencarroll.com"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#1e1c22",
+      "frame_inactive": "#1e1c22",
+      "tab_background_text": "#8a8588",
+      "tab_text": "#e0dbd5",
+      "tab_loading": "#dc9472",
+      "tab_line": "#dc9472",
+      "tab_selected": "#282530",
+      "toolbar": "#282530",
+      "toolbar_text": "#e0dbd5",
+      "toolbar_field": "#1e1c22",
+      "toolbar_field_text": "#e0dbd5",
+      "toolbar_field_border": "#4a4555",
+      "toolbar_field_focus": "#1e1c22",
+      "toolbar_field_highlight": "#3d3748",
+      "toolbar_field_highlight_text": "#e0dbd5",
+      "toolbar_top_separator": "#1e1c22",
+      "toolbar_bottom_separator": "#4a4555",
+      "ntp_background": "#282530",
+      "ntp_text": "#e0dbd5",
+      "popup": "#282530",
+      "popup_text": "#e0dbd5",
+      "popup_border": "#4a4555",
+      "popup_highlight": "#3d3748",
+      "popup_highlight_text": "#e0dbd5",
+      "sidebar": "#1e1c22",
+      "sidebar_text": "#e0dbd5",
+      "sidebar_border": "#4a4555",
+      "sidebar_highlight": "#3d3748",
+      "sidebar_highlight_text": "#e0dbd5",
+      "bookmark_text": "#e0dbd5",
+      "button_background_hover": "#4a4555",
+      "button_background_active": "#3d3748",
+      "icons": "#8a8588",
+      "icons_attention": "#dc9472"
+    }
+  }
+}
