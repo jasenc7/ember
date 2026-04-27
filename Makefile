@@ -1,6 +1,6 @@
-.PHONY: build terminal ghostty btop zed firefox firefox-package clean
+.PHONY: build terminal ghostty btop zed firefox chrome clean
 
-build: terminal ghostty btop zed firefox
+build: terminal ghostty btop zed firefox chrome
 
 terminal:
 	swift terminal/convert.swift
@@ -17,6 +17,9 @@ zed:
 firefox:
 	swift generate.swift firefox/ember/manifest.json.template firefox/ember/manifest.json
 
+chrome:
+	swift generate.swift chrome/manifest.json.template chrome/manifest.json
+
 # Package the Firefox theme as .xpi for signing/distribution.
 # Submit the .xpi at https://addons.mozilla.org/developers/ as "unlisted"
 # to self-host, or "listed" to publish. Mozilla signs it and returns the
@@ -27,4 +30,4 @@ firefox-package: firefox
 
 
 clean:
-	rm -f terminal/Ember.terminal ghostty/config btop/ember.theme zed/ember.json firefox/ember/manifest.json firefox/ember.xpi
+	rm -f terminal/Ember.terminal ghostty/config btop/ember.theme zed/ember.json firefox/ember/manifest.json firefox/ember.xpi chrome/manifest.json

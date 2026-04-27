@@ -70,6 +70,16 @@ for name in ["cursor", "bold", "selection"] {
 
 // ── Render template ─────────────────────────────────────────────────
 
+func hexToRGB(_ hex: String) -> String {
+    var hex = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+    if hex.hasPrefix("#") { hex.removeFirst() }
+    guard let val = Int(hex, radix: 16) else { return "0, 0, 0" }
+    let r = (val >> 16) & 0xff
+    let g = (val >> 8) & 0xff
+    let b = val & 0xff
+    return "\(r), \(g), \(b)"
+}
+
 var template = try! String(contentsOfFile: templatePath, encoding: .utf8)
 
 let placeholder = try! NSRegularExpression(pattern: #"\{\{(\w+)\}\}"#)
@@ -81,9 +91,21 @@ let matches = placeholder.matches(in: template, range: fullRange)
 for match in matches.reversed() {
     let keyRange = Range(match.range(at: 1), in: template)!
     let key = String(template[keyRange])
-    guard let value = values[key] else {
-        fatalError("template references unknown key: {{\(key)}}")
+    
+    let value: String
+    if key.hasSuffix("_rgb") {
+        let baseKey = String(key.dropLast(4))
+        guard let hex = values[baseKey] else {
+            fatalError("template references unknown key: {{\(key)}}")
+        }
+        value = hexToRGB(hex)
+    } else {
+        guard let v = values[key] else {
+            fatalError("template references unknown key: {{\(key)}}")
+        }
+        value = v
     }
+    
     let matchRange = Range(match.range, in: result)!
     result.replaceSubrange(matchRange, with: value)
 }
