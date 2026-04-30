@@ -1,6 +1,6 @@
-.PHONY: build terminal ghostty btop zed firefox chrome clean
+.PHONY: build terminal ghostty btop zed firefox chrome windows-terminal clean
 
-build: terminal ghostty btop zed firefox chrome
+build: terminal ghostty btop zed firefox chrome windows-terminal
 
 terminal:
 	swift terminal/convert.swift
@@ -13,6 +13,9 @@ btop:
 
 zed:
 	swift generate.swift zed/ember.json.template zed/ember.json
+
+windows-terminal:
+	swift generate.swift windows-terminal/ember.json.template windows-terminal/ember.json
 
 firefox:
 	swift generate.swift firefox/ember/manifest.json.template firefox/ember/manifest.json
@@ -30,4 +33,4 @@ firefox-package: firefox
 
 
 clean:
-	rm -f terminal/Ember.terminal ghostty/config btop/ember.theme zed/ember.json firefox/ember/manifest.json firefox/ember.xpi chrome/manifest.json
+	rm -f terminal/Ember.terminal ghostty/config btop/ember.theme zed/ember.json firefox/ember/manifest.json firefox/ember.xpi chrome/manifest.json windows-terminal/ember.json
