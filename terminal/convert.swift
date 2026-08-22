@@ -101,7 +101,7 @@ func colorData(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat) -> Data {
     return try! NSKeyedArchiver.archivedData(withRootObject: c, requiringSecureCoding: true)
 }
 
-let srcURL = scriptDir.appendingPathComponent("Dracula.terminal")
+let srcURL = scriptDir.appendingPathComponent("Ember.terminal.template")
 let dstURL = scriptDir.appendingPathComponent("Ember.terminal")
 
 var p = try! PropertyListSerialization.propertyList(

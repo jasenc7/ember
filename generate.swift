@@ -37,8 +37,9 @@ var values: [String: String] = [:]
 // Top-level
 values["font"] = paletteValue("font")
 
-// [colors]
-for name in ["dark", "background", "text", "ember", "sage", "peach", "gold", "sky", "orchid", "muted", "ghost", "selection"] {
+// Color values used by the shared dark palette and app-specific variants.
+for name in ["dark", "background", "text", "ember", "sage", "peach", "gold", "sky", "orchid", "muted", "ghost", "selection",
+             "light_surface", "light_ink", "light_accent", "light_diff_added", "light_skill"] {
     values[name] = paletteValue(name)
 }
 

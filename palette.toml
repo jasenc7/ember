@@ -37,3 +37,10 @@ bright_white   = "#eee9e3"
 cursor    = "ember"
 bold      = "bright_white"
 selection = "selection"
+
+[chatgpt.light]
+light_surface    = "#f2eef0"
+light_ink        = "#332e36"
+light_accent     = "#a95338"
+light_diff_added = "#2d766c"
+light_skill      = "#79549a"

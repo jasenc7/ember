@@ -54,11 +54,11 @@ Once you're done with that copy [starship.toml](https://github.com/jasenc7/ember
 
 Copy [ghostty/config.full](https://github.com/jasenc7/ember/blob/main/ghostty/config.full) and put it in your Ghostty settings.
 
-## FireFox
+## Firefox
 
-[FireFox](https://www.firefox.com)
+[Firefox](https://www.firefox.com)
 
-Download [firefox/ember-0.2.0-mozilla-signed.xpi](https://github.com/jasenc7/ember/blob/main/firefox/ember-0.2.0-mozilla-signed.xpi). Open FireFox > shift+cmd+A > click the gear > Install Add on From File > import the thing you just downloaded.
+Download [firefox/ember-0.2.0-mozilla-signed.xpi](https://github.com/jasenc7/ember/blob/main/firefox/ember-0.2.0-mozilla-signed.xpi). Open Firefox > shift+cmd+A > click the gear > Install Add-on From File > import the thing you just downloaded.
 
 ## Zed
 
@@ -70,11 +70,11 @@ Copy [zed/ember.json](https://github.com/jasenc7/ember/blob/main/zed/ember.json)
 
 [btop](https://github.com/aristocratos/btop)
 
-Copy [btop/ember.json](https://github.com/jasenc7/ember/blob/main/btop/ember.theme) and put it in `~/.config/btop/themes/ember.json`. Open btop > m > enter > left/right until you find TTY or Ember - check both and land on whichever you like more.
+Copy [btop/ember.theme](https://github.com/jasenc7/ember/blob/main/btop/ember.theme) to `~/.config/btop/themes/ember.theme`. Open btop > m > enter > left/right until you find TTY or Ember - check both and land on whichever you like more.
 
 ## ChatGPT
 
-Copy the contents of [chatgpt/ember-dark.txt](https://github.com/jasenc7/ember/blob/main/chatgpt/ember-dark.txt). In the ChatGPT macOS app, open Settings > Appearance > Dark theme > Import, paste the theme string, then click Import theme.
+Copy the contents of [chatgpt/ember-dark.txt](https://github.com/jasenc7/ember/blob/main/chatgpt/ember-dark.txt) or [chatgpt/ember-light.txt](https://github.com/jasenc7/ember/blob/main/chatgpt/ember-light.txt). In the ChatGPT macOS app, open Settings > Appearance, use Import in the matching Dark theme or Light theme section, paste the theme string, then click Import theme.
 
 ## bone.css
 

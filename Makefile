@@ -1,4 +1,4 @@
-.PHONY: build terminal ghostty btop zed firefox chrome windows-terminal chatgpt clean
+.PHONY: build terminal ghostty btop zed firefox firefox-package chrome windows-terminal chatgpt clean
 
 build: terminal ghostty btop zed firefox chrome windows-terminal chatgpt
 
@@ -25,6 +25,7 @@ chrome:
 
 chatgpt:
 	swift generate.swift chatgpt/ember-dark.txt.template chatgpt/ember-dark.txt
+	swift generate.swift chatgpt/ember-light.txt.template chatgpt/ember-light.txt
 
 # Package the Firefox theme as .xpi for signing/distribution.
 # Submit the .xpi at https://addons.mozilla.org/developers/ as "unlisted"
@@ -34,6 +35,5 @@ firefox-package: firefox
 	cd firefox/ember && zip -r ../ember.xpi manifest.json
 	@echo "→ firefox/ember.xpi ready to submit to addons.mozilla.org"
 
-
 clean:
-	rm -f terminal/Ember.terminal ghostty/config btop/ember.theme zed/ember.json firefox/ember/manifest.json firefox/ember.xpi chrome/manifest.json windows-terminal/ember.json chatgpt/ember-dark.txt
+	rm -f terminal/Ember.terminal ghostty/config btop/ember.theme zed/ember.json firefox/ember/manifest.json firefox/ember.xpi chrome/manifest.json windows-terminal/ember.json chatgpt/ember-dark.txt chatgpt/ember-light.txt
