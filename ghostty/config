@@ -6,7 +6,7 @@ font-size = 14
 
 background = #282530
 foreground = #e0dbd5
-cursor-color = #e8846b
+cursor-color = #dc9472
 cursor-style = block
 cursor-style-blink = false
 
@@ -15,20 +15,20 @@ selection-foreground = #e0dbd5
 
 # ANSI palette
 palette = 0=#1e1c22
-palette = 1=#e8846b
+palette = 1=#dc9472
 palette = 2=#5faa9e
-palette = 3=#f4976c
-palette = 4=#7e9bb5
-palette = 5=#c49ec4
-palette = 6=#5faa9e
+palette = 3=#e8a682
+palette = 4=#6fbcd4
+palette = 5=#b080cc
+palette = 6=#6fbcd4
 palette = 7=#e0dbd5
 palette = 8=#8a8588
-palette = 9=#f4976c
+palette = 9=#e8a682
 palette = 10=#5faa9e
 palette = 11=#dbb45a
-palette = 12=#7e9bb5
-palette = 13=#c49ec4
-palette = 14=#5faa9e
+palette = 12=#6fbcd4
+palette = 13=#b080cc
+palette = 14=#6fbcd4
 palette = 15=#eee9e3
 
 bold-is-bright = false
