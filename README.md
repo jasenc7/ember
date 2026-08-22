@@ -9,7 +9,7 @@ The selection is intentionally tight - and changes as my stack changes. I'd sugg
 
 ## Font
 
-IBM Plex Mono
+BlexMono Nerd Font
 
 Here are step-by-step instructions to manually install the BlexMono Nerd Font (a patched version of IBM Plex Mono) on major operating systems by downloading the ZIP archive from the official Nerd Fonts site and installing the TTF files directly, without using package managers like Homebrew, apt, or pacman. [NerdFont GitHub](https://github.com/ryanoasis/nerd-fonts)
 
@@ -71,6 +71,10 @@ Copy [zed/ember.json](https://github.com/jasenc7/ember/blob/main/zed/ember.json)
 [btop](https://github.com/aristocratos/btop)
 
 Copy [btop/ember.json](https://github.com/jasenc7/ember/blob/main/btop/ember.theme) and put it in `~/.config/btop/themes/ember.json`. Open btop > m > enter > left/right until you find TTY or Ember - check both and land on whichever you like more.
+
+## ChatGPT
+
+Copy the contents of [chatgpt/ember-dark.txt](https://github.com/jasenc7/ember/blob/main/chatgpt/ember-dark.txt). In the ChatGPT macOS app, open Settings > Appearance > Dark theme > Import, paste the theme string, then click Import theme.
 
 ## bone.css
 
