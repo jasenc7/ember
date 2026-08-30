@@ -5,11 +5,6 @@
    License: MIT
 */
 
-/* ---- Font ---- */
-/* Swap one import to change the entire site's typeface. */
-
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&display=swap");
-
 /* ---- Reset ---- */
 
 *,
@@ -24,7 +19,7 @@
 
 :root {
     --bone-font:
-        "IBM Plex Mono", ui-monospace, "Cascadia Code", "Source Code Pro",
+        "Andale Mono", ui-monospace, "Cascadia Code", "Source Code Pro",
         Menlo, Consolas, monospace;
     --bone-line-height: 1.6;
     --bone-max-width: 72ch;

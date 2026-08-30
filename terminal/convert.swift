@@ -115,6 +115,14 @@ for (key, value) in ansiKeys {
     p[key] = colorData(r, g, b)
 }
 
+let fontName = paletteValue("font")
+guard let font = NSFont(name: fontName, size: 14) else {
+    fatalError("font unavailable: \(fontName)")
+}
+p["Font"] = try! NSKeyedArchiver.archivedData(
+    withRootObject: font,
+    requiringSecureCoding: true
+)
 p["name"] = "Ember"
 
 let out = try! PropertyListSerialization.data(fromPropertyList: p, format: .xml, options: 0)

@@ -9,38 +9,11 @@ The selection is intentionally tight - and changes as my stack changes. I'd sugg
 
 ## Font
 
-BlexMono Nerd Font
-
-Here are step-by-step instructions to manually install the BlexMono Nerd Font (a patched version of IBM Plex Mono) on major operating systems by downloading the ZIP archive from the official Nerd Fonts site and installing the TTF files directly, without using package managers like Homebrew, apt, or pacman. [NerdFont GitHub](https://github.com/ryanoasis/nerd-fonts)
-
-Download the [BlexMono ZIP](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/IBMPlexMono.zip).
-
-### Linux
-
-- Create a fonts directory if needed: `mkdir -p ~/.local/share/fonts`.
-- Unzip the archive: `unzip 'BlexMono.zip' -d ~/.local/share/fonts/`.
-- Refresh the font cache: `fc-cache -fv`.
-- Verify with `fc-list | grep "BlexMono"`.
-
-
-### macOS
-
-- Double-click the ZIP to extract it.
-- Open Font Book (built-in app).
-- Select all `.ttf` files in the extracted folder, then drag them into Font Book or use File > Add Fonts.
-- Click Install if prompted (installs for current user).
-
-
-### Windows
-
-- Right-click the ZIP and extract all files to a folder.
-- Select all `.ttf` files (Ctrl+A).
-- Right-click the selection and choose "Install" (or "Install for all users" as admin).
-- No restart needed; fonts appear immediately in apps like Windows Terminal.
+Andale Mono. It is available on the systems this personal configuration targets; other systems fall back to their local monospace stack where the format permits one.
 
 ## Terminal
 
-Download [ember.terminal](https://github.com/jasenc7/ember/blob/main/terminal/Ember.terminal) and import it as a Theme in Terminal.app. Set it as default. Set font to BlexMono and increase font size to 14.
+Download [ember.terminal](https://github.com/jasenc7/ember/blob/main/terminal/Ember.terminal) and import it as a Theme in Terminal.app. Set it as default; the generated profile includes Andale Mono at 14pt.
 
 ## Prompt
 
@@ -78,7 +51,7 @@ Copy the contents of [chatgpt/ember-dark.txt](https://github.com/jasenc7/ember/b
 
 ## bone.css
 
-[bone.css](https://github.com/jasenc7/ember/blob/main/bone.css) is a classless CSS base that makes unstyled HTML look clean out of the box. It pulls IBM Plex Mono through Google Fonts. Drop it in and you're done — no classes, no configuration.
+[bone.css](https://github.com/jasenc7/ember/blob/main/bone.css) is a classless CSS base that makes unstyled HTML look clean out of the box. It prefers Andale Mono and falls back through the local monospace stack. Drop it in and you're done — no classes, no configuration.
 
 ## Generating themes
 
