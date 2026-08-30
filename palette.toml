@@ -1,5 +1,5 @@
 name = "Ember"
-font = "BlexMono Nerd Font"
+font = "Andale Mono"
 
 [colors]
 dark       = "#1e1c22"
