@@ -19,7 +19,7 @@
 
 :root {
     --bone-font:
-        "Andale Mono", ui-monospace, "Cascadia Code", "Source Code Pro",
+        "BlexMono Nerd Font", "IBM Plex Mono", ui-monospace, "Cascadia Code", "Source Code Pro",
         Menlo, Consolas, monospace;
     --bone-line-height: 1.6;
     --bone-max-width: 72ch;

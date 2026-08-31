@@ -9,11 +9,11 @@ The selection is intentionally tight - and changes as my stack changes. I'd sugg
 
 ## Font
 
-Andale Mono. It is available on the systems this personal configuration targets; other systems fall back to their local monospace stack where the format permits one.
+BlexMono Nerd Font. It is installed on the systems this personal configuration targets; other systems fall back to their local monospace stack where the format permits one.
 
 ## Terminal
 
-Download [ember.terminal](https://github.com/jasenc7/ember/blob/main/terminal/Ember.terminal) and import it as a Theme in Terminal.app. Set it as default; the generated profile includes Andale Mono at 14pt.
+Download [ember.terminal](https://github.com/jasenc7/ember/blob/main/terminal/Ember.terminal) and import it as a Theme in Terminal.app. Set it as default; the generated profile includes BlexMono Nerd Font at 14pt.
 
 ## Prompt
 
@@ -51,7 +51,7 @@ Copy the contents of [chatgpt/ember-dark.txt](https://github.com/jasenc7/ember/b
 
 ## bone.css
 
-[bone.css](https://github.com/jasenc7/ember/blob/main/bone.css) is a classless CSS base that makes unstyled HTML look clean out of the box. It prefers Andale Mono and falls back through the local monospace stack. Drop it in and you're done — no classes, no configuration.
+[bone.css](https://github.com/jasenc7/ember/blob/main/bone.css) is a classless CSS base that makes unstyled HTML look clean out of the box. It prefers a locally installed BlexMono Nerd Font and falls back through the local monospace stack. Drop it in and you're done — no classes, no configuration.
 
 ## Generating themes
 
