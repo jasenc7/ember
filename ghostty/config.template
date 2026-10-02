@@ -1,0 +1,39 @@
+# Ember — generated from palette.toml
+# Do not edit config directly. Edit config.template, then: make ghostty
+
+font-family = "{{font}}"
+font-size = 14
+
+background = {{background}}
+foreground = {{text}}
+cursor-color = {{cursor}}
+cursor-style = block
+cursor-style-blink = false
+
+selection-background = {{selection}}
+selection-foreground = {{text}}
+
+# ANSI palette
+palette = 0={{black}}
+palette = 1={{red}}
+palette = 2={{green}}
+palette = 3={{yellow}}
+palette = 4={{blue}}
+palette = 5={{magenta}}
+palette = 6={{cyan}}
+palette = 7={{white}}
+palette = 8={{bright_black}}
+palette = 9={{bright_red}}
+palette = 10={{bright_green}}
+palette = 11={{bright_yellow}}
+palette = 12={{bright_blue}}
+palette = 13={{bright_magenta}}
+palette = 14={{bright_cyan}}
+palette = 15={{bright_white}}
+
+bold-is-bright = false
+window-theme = ghostty
+window-padding-x = 14
+window-padding-y = 14
+confirm-close-surface = false
+resize-overlay = never

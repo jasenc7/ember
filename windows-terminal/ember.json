@@ -1,0 +1,26 @@
+// Generated from palette.toml. Do not edit directly. Run: make windows-terminal
+// Add this object to the "schemes" array in Windows Terminal settings.json
+// Then set "colorScheme": "Ember" in any profile.
+{
+    "name": "Ember",
+    "background": "#282530",
+    "foreground": "#e0dbd5",
+    "cursorColor": "#dc9472",
+    "selectionBackground": "#3d3748",
+    "black": "#1e1c22",
+    "red": "#dc9472",
+    "green": "#5faa9e",
+    "yellow": "#e8a682",
+    "blue": "#6fbcd4",
+    "purple": "#b080cc",
+    "cyan": "#6fbcd4",
+    "white": "#e0dbd5",
+    "brightBlack": "#8a8588",
+    "brightRed": "#e8a682",
+    "brightGreen": "#5faa9e",
+    "brightYellow": "#dbb45a",
+    "brightBlue": "#6fbcd4",
+    "brightPurple": "#b080cc",
+    "brightCyan": "#6fbcd4",
+    "brightWhite": "#eee9e3"
+}

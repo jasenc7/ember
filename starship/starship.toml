@@ -1,0 +1,19 @@
+# ~/.config/starship.toml
+
+# This disables all language modules in Starship and just leaves the git integration working.
+
+# See https://starship.rs/config/#default-prompt-format for the default prompt
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$line_break\
+$character\
+"""
+
+# If you want to enable the git metrics module uncomment the following lines:
+# [git_metrics]
+# disabled = false

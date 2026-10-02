@@ -1,0 +1,49 @@
+{
+  "manifest_version": 2,
+  "version": "0.2.0",
+  "name": "Ember",
+  "description": "Joshua Tree at 4pm on Halloween.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "jasen@jasencarroll.com"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "{{dark}}",
+      "frame_inactive": "{{dark}}",
+      "tab_background_text": "{{muted}}",
+      "tab_text": "{{text}}",
+      "tab_loading": "{{ember}}",
+      "tab_line": "{{ember}}",
+      "tab_selected": "{{background}}",
+      "toolbar": "{{background}}",
+      "toolbar_text": "{{text}}",
+      "toolbar_field": "{{dark}}",
+      "toolbar_field_text": "{{text}}",
+      "toolbar_field_border": "{{ghost}}",
+      "toolbar_field_focus": "{{dark}}",
+      "toolbar_field_highlight": "{{selection}}",
+      "toolbar_field_highlight_text": "{{text}}",
+      "toolbar_top_separator": "{{dark}}",
+      "toolbar_bottom_separator": "{{ghost}}",
+      "ntp_background": "{{background}}",
+      "ntp_text": "{{text}}",
+      "popup": "{{background}}",
+      "popup_text": "{{text}}",
+      "popup_border": "{{ghost}}",
+      "popup_highlight": "{{selection}}",
+      "popup_highlight_text": "{{text}}",
+      "sidebar": "{{dark}}",
+      "sidebar_text": "{{text}}",
+      "sidebar_border": "{{ghost}}",
+      "sidebar_highlight": "{{selection}}",
+      "sidebar_highlight_text": "{{text}}",
+      "bookmark_text": "{{text}}",
+      "button_background_hover": "{{ghost}}",
+      "button_background_active": "{{selection}}",
+      "icons": "{{muted}}",
+      "icons_attention": "{{ember}}"
+    }
+  }
+}

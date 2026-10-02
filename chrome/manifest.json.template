@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "version": "0.1.0",
+  "name": "Ember",
+  "description": "Joshua Tree at 4pm on Halloween.",
+  "theme": {
+    "colors": {
+      "frame": [{{dark_rgb}}],
+      "frame_inactive": [{{dark_rgb}}],
+      "frame_incognito": [{{dark_rgb}}],
+      "frame_incognito_inactive": [{{dark_rgb}}],
+      "toolbar": [{{background_rgb}}],
+      "tab_text": [{{text_rgb}}],
+      "tab_background_text": [{{muted_rgb}}],
+      "bookmark_text": [{{text_rgb}}],
+      "ntp_background": [{{background_rgb}}],
+      "ntp_text": [{{text_rgb}}],
+      "button_background": [{{dark_rgb}}]
+    },
+    "tints": {
+      "buttons": [0.33, 0.5, 0.47]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom",
+      "ntp_background_repeat": "no-repeat"
+    }
+  }
+}

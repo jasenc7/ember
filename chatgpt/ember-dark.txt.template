@@ -1,0 +1,1 @@
+codex-theme-v1:{"codeThemeId":"monokai","theme":{"accent":"{{ember}}","contrast":50,"fonts":{"code":"\"{{font}}\"","ui":"\"{{font}}\""},"ink":"{{text}}","opaqueWindows":true,"semanticColors":{"diffAdded":"{{sage}}","diffRemoved":"{{ember}}","skill":"{{orchid}}"},"surface":"{{background}}"},"variant":"dark"}

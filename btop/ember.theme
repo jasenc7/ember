@@ -1,0 +1,81 @@
+# Ember — Joshua Tree at 4pm on Halloween
+# Generated from palette.toml. Do not edit directly. Run: make btop
+
+# Main background
+theme[main_bg]="#282530"
+
+# Main text color
+theme[main_fg]="#e0dbd5"
+
+# Title color for boxes
+theme[title]="#e0dbd5"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#dc9472"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#3d3748"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#e0dbd5"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#8a8588"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#5faa9e"
+
+# Cpu box outline color
+theme[cpu_box]="#4a4555"
+
+# Memory/disks box outline color
+theme[mem_box]="#4a4555"
+
+# Net up/down box outline color
+theme[net_box]="#4a4555"
+
+# Processes box outline color
+theme[proc_box]="#4a4555"
+
+# Box divider line and small boxes line color
+theme[div_line]="#4a4555"
+
+# Temperature graph colors
+theme[temp_start]="#6fbcd4"
+theme[temp_mid]="#dbb45a"
+theme[temp_end]="#dc9472"
+
+# CPU graph colors
+theme[cpu_start]="#5faa9e"
+theme[cpu_mid]="#dbb45a"
+theme[cpu_end]="#dc9472"
+
+# Mem/Disk free meter
+theme[free_start]="#4a4555"
+theme[free_mid]="#5faa9e"
+theme[free_end]="#5faa9e"
+
+# Mem/Disk cached meter
+theme[cached_start]="#4a4555"
+theme[cached_mid]="#6fbcd4"
+theme[cached_end]="#6fbcd4"
+
+# Mem/Disk available meter
+theme[available_start]="#4a4555"
+theme[available_mid]="#dbb45a"
+theme[available_end]="#dbb45a"
+
+# Mem/Disk used meter
+theme[used_start]="#4a4555"
+theme[used_mid]="#dc9472"
+theme[used_end]="#e8a682"
+
+# Download graph colors
+theme[download_start]="#282530"
+theme[download_mid]="#5faa9e"
+theme[download_end]="#6fbcd4"
+
+# Upload graph colors
+theme[upload_start]="#282530"
+theme[upload_mid]="#dc9472"
+theme[upload_end]="#e8a682"

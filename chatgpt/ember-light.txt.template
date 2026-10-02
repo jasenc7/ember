@@ -1,0 +1,1 @@
+codex-theme-v1:{"codeThemeId":"catppuccin","theme":{"accent":"{{light_accent}}","contrast":60,"fonts":{"code":"\"{{font}}\"","ui":"\"{{font}}\""},"ink":"{{light_ink}}","opaqueWindows":true,"semanticColors":{"diffAdded":"{{light_diff_added}}","diffRemoved":"{{light_accent}}","skill":"{{light_skill}}"},"surface":"{{light_surface}}"},"variant":"light"}
