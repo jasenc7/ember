@@ -1,19 +1,40 @@
-# ~/.config/starship.toml
+add_newline = false
 
-# This disables all language modules in Starship and just leaves the git integration working.
-
-# See https://starship.rs/config/#default-prompt-format for the default prompt
 format = """
 $directory\
 $git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
 $git_status\
 $line_break\
-$character\
-"""
+$hostname\
+$character"""
 
-# If you want to enable the git metrics module uncomment the following lines:
-# [git_metrics]
-# disabled = false
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+use_os_path_sep = false
+format = "[$path]($style)"
+style = "bold blue"
+
+[directory.substitutions]
+'C:\msys64\home\jasen' = '~'
+'C:/msys64/home/jasen' = '~'
+
+[hostname]
+ssh_only = false
+trim_at = ""
+format = "[$hostname]($style) "
+style = "bold cyan"
+
+[character]
+success_symbol = "[\u276F](bold green)"
+error_symbol = "[\u276F](bold red)"
+
+[git_branch]
+format = " [$symbol$branch]($style)"
+symbol = "\uE0A0 "
+style = "bold purple"
+
+[git_status]
+format = " [$all_status$ahead_behind]($style)"
+style = "bold red"
+
