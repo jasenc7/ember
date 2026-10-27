@@ -88,6 +88,14 @@ Download [firefox/ember-0.2.0-mozilla-signed.xpi](https://github.com/axiomlayer/
 
 Copy [zed/ember.json](https://github.com/axiomlayer/ember/blob/main/zed/ember.json) and put it in `~/.config/zed/themes/ember.json`. Open Zed > cmd+k > cmd+t > "Ember".
 
+## Visual Studio Code
+
+Ember for VS Code uses the Zed syntax mapping and the shared terminal palette.
+See [vscode/README.md](vscode/README.md) for installation on Windows, macOS, and Linux,
+or packaging as a VSIX. Select **Ember** under **Preferences: Color Theme** after
+installation. The generated theme is ready to use without Swift; `make vscode`
+regenerates it from `palette.toml`.
+
 ## btop
 
 [btop](https://github.com/aristocratos/btop)
