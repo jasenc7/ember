@@ -1,0 +1,33 @@
+{
+  "name": "ember-theme",
+  "displayName": "Ember",
+  "description": "Joshua Tree at dusk on Halloween. Ember for Visual Studio Code.",
+  "version": "0.1.0",
+  "publisher": "jasenc7",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "ember",
+    "dark",
+    "warm",
+    "theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasenc7/ember.git",
+    "directory": "vscode"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Ember",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ember-color-theme.json"
+      }
+    ]
+  }
+}

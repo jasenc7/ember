@@ -1,6 +1,6 @@
-.PHONY: build terminal ghostty btop zed firefox firefox-package chrome windows-terminal chatgpt clean
+.PHONY: build terminal ghostty btop zed firefox firefox-package chrome windows-terminal chatgpt vscode clean
 
-build: terminal ghostty btop zed firefox chrome windows-terminal chatgpt
+build: terminal ghostty btop zed firefox chrome windows-terminal chatgpt vscode
 
 terminal:
 	swift terminal/convert.swift
@@ -13,6 +13,9 @@ btop:
 
 zed:
 	swift generate.swift zed/ember.json.template zed/ember.json
+
+vscode:
+	swift generate.swift vscode/themes/ember-color-theme.json.template vscode/themes/ember-color-theme.json
 
 windows-terminal:
 	swift generate.swift windows-terminal/ember.json.template windows-terminal/ember.json
@@ -36,4 +39,4 @@ firefox-package: firefox
 	@echo "→ firefox/ember.xpi ready to submit to addons.mozilla.org"
 
 clean:
-	rm -f terminal/Ember.terminal ghostty/config btop/ember.theme zed/ember.json firefox/ember/manifest.json firefox/ember.xpi chrome/manifest.json windows-terminal/ember.json chatgpt/ember-dark.txt chatgpt/ember-light.txt
+	rm -f terminal/Ember.terminal ghostty/config btop/ember.theme zed/ember.json firefox/ember/manifest.json firefox/ember.xpi chrome/manifest.json windows-terminal/ember.json chatgpt/ember-dark.txt chatgpt/ember-light.txt vscode/themes/ember-color-theme.json
