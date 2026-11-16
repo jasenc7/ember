@@ -37,10 +37,20 @@ minus button, or re-import the version you exported.
 
 ## Ghostty
 
-Pick the file first. `ghostty/config` holds the generated colors and font only.
-`ghostty/config.full` is the existing personal selection: the same colors plus keybinds, paste
-and bell behavior, with font `BlexMono Nerd Font Mono`. Either one replaces your whole config
-file, not just the colors.
+Pick the file first. Neither is appearance-only, and either one replaces your whole config file.
+
+- `ghostty/config`, the generated file, sets the colors, `font-family = "BlexMono Nerd Font"`
+  and `font-size = 14`. It also sets behavior: `cursor-style = block`,
+  `cursor-style-blink = false`, `bold-is-bright = false`, `window-theme = ghostty`,
+  `window-padding-x = 14`, `window-padding-y = 14`, `confirm-close-surface = false` (no
+  confirmation when closing a running terminal) and `resize-overlay = never`.
+- `ghostty/config.full` is the existing personal selection. It has all of the above, uses
+  `font-family = "BlexMono Nerd Font Mono"`, and adds Home/End/Page Up/Page Down keybinds,
+  `clipboard-paste-bracketed-safe = true`, `bell-features = audio` and
+  `macos-secure-input-indication = false`.
+
+If you want to keep any of your current settings, such as close confirmation, add them back to
+the copied file after installing it.
 
 Ghostty reads these files, in this order. Later files override earlier ones, and the macOS paths
 load after the XDG paths. The `config.ghostty` name is used from Ghostty 1.2.3; `config` before
@@ -202,9 +212,9 @@ What each step changes, and its backup:
 | --- | --- | --- | --- |
 | Font | Font files in `%LOCALAPPDATA%\Microsoft\Windows\Fonts` plus registry values under `HKCU\Software\Microsoft\Windows NT\CurrentVersion\Fonts` | None | Only if this run installed it (the step says "faces installed" rather than "already installed"): Settings > Personalization > Fonts > the family > Uninstall |
 | Windows Terminal | Adds or replaces the `Ember` scheme, sets `profiles.defaults.colorScheme` (and `profiles.defaults.font` unless `-Font None`), and removes per-profile `colorScheme` values that name another scheme | `settings.json.pre-ember-<yyyyMMdd-HHmmss>.bak` beside `settings.json`, written only when the file is about to change | Close Windows Terminal and copy that `.bak` over `settings.json`. This also brings back the per-profile schemes the installer removed |
-| Starship | Copies `starship.toml` to `%USERPROFILE%\.config\starship.toml` | `starship.toml.pre-ember-<yyyyMMdd-HHmmss>.bak`, only when an existing file differs | Copy that `.bak` back. If there was none, delete the file |
-| Zed | Copies `ember.json` to `%APPDATA%\Zed\themes\ember.json`, overwriting any existing file | None | Choose your previous theme in Zed (`ctrl-k ctrl-t`). Delete `ember.json` if you don't want it |
-| btop (WSL) | Copies the theme into the guest, overwriting any existing `ember.theme` | None | Choose your previous theme in btop; delete the file inside the guest if unwanted |
+| Starship | Copies `starship.toml` to `%USERPROFILE%\.config\starship.toml` | `starship.toml.pre-ember-<yyyyMMdd-HHmmss>.bak`, only when an existing file differs. If your file already matches Ember's, there's no backup and no change | Copy that `.bak` back. With no `.bak`, delete the file only if it didn't exist before the run; if it already matched, leave it |
+| Zed | Copies `ember.json` to `%APPDATA%\Zed\themes\ember.json`, overwriting any existing file | None. Copy any existing `ember.json` aside before running | Choose your previous theme in Zed (`ctrl-k ctrl-t`). Put back the copy you saved, or delete `ember.json` if there wasn't one |
+| btop (WSL) | Copies the theme into the guest, overwriting any existing `ember.theme` | None. Copy any existing `~/.config/btop/themes/ember.theme` in the guest aside before running | Choose your previous theme in btop. Put back the copy you saved, or delete the file in the guest if there wasn't one |
 
 The installer clears per-profile Windows Terminal schemes. If you've given particular profiles
 their own scheme on purpose, use the manual steps, or restore from the `.bak` afterwards.
