@@ -63,6 +63,7 @@ theme_files=(
     starship/starship.toml
     chatgpt/ember-dark.txt
     chatgpt/ember-light.txt
+    windows/Install-Ember.ps1
     docs/theme-targets.md
     docs/install-and-restore.md
     docs/releases.md
@@ -122,9 +123,15 @@ build() {
     # -X drops owner/permission extras; -D writes no directory entries. Files are
     # stored byte for byte, so the signed XPI keeps its Mozilla signature.
     zip -q -X -D "$tmp" "$@"
-    [ ! -e "$dest" ] || die "$dest appeared while packaging; not overwriting it"
-    mv "$tmp" "$dest"
+    # Publish with a hard link, not mv: ln checks and creates in one step and fails if
+    # $dest exists, so a second run for the same version can never replace (and later
+    # clean up) an archive another run published.
+    if ! ln "$tmp" "$dest" 2>/dev/null; then
+        [ -e "$dest" ] && die "$dest was created by another run while packaging; not overwriting it"
+        die "could not publish $dest (out/ must be on a filesystem that supports hard links)"
+    fi
     created+=("$dest")
+    rm -f "$tmp"
 }
 
 build "$source_zip" "${source_files[@]}"

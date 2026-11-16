@@ -51,6 +51,7 @@ targets in this archive without that error, run
 | Windows Terminal | `windows-terminal/ember.json` |
 | Starship | `starship/starship.toml` |
 | ChatGPT | `chatgpt/ember-dark.txt`, `chatgpt/ember-light.txt` |
+| Windows installer | `windows/Install-Ember.ps1`. It installs the Windows Terminal, Starship, Zed and (with `-IncludeWsl`) btop files from this archive, which it finds relative to its own folder, so it works from an unpacked themes archive without the source archive |
 | Instructions | `docs/theme-targets.md`, `docs/install-and-restore.md`, `docs/releases.md` |
 
 ## Never included
@@ -79,8 +80,11 @@ Nothing is written until these checks pass:
   never overwritten; use a new version.
 - **`zip` not installed:** exits with status 1.
 
-Each archive is written to a temporary `<archive>.partial.<pid>` file and renamed into place when
-it's complete. If anything fails after writing starts, including an interrupt (Ctrl-C), `TERM` or
+Each archive is written to a temporary `<archive>.partial.<pid>` file. When it's complete, it's
+published with a hard link. That checks and creates in one step and fails if the archive already
+exists, so two runs for the same version can't overwrite or delete each other's archives: the
+second one stops and removes only its own files. `out/` has to be on a filesystem with hard links,
+which is any normal macOS or Linux disk. If anything fails after writing starts, including an interrupt (Ctrl-C), `TERM` or
 `HUP`, the script removes only the files this run created: the partial file, the source archive
 if it already finished, and `out/` if this run created it and it's empty. Earlier archives and
 everything else under `out/` stay as they are. If a `.partial` file with this run's name is
