@@ -97,9 +97,17 @@ done
 
 created=()
 made_out_dir=0
+# The archive being published right now. A signal can land after ln creates $dest but
+# before $dest is recorded in created; $dest is this run's only if it is the same file
+# (same inode) as this run's temporary file, so a concurrent run's archive is never touched.
+publishing_tmp=""
+publishing_dest=""
 cleanup() {
     status=$?
     if [ "$status" -ne 0 ]; then
+        if [ -n "$publishing_tmp" ] && [ "$publishing_dest" -ef "$publishing_tmp" ]; then
+            rm -f -- "$publishing_dest"
+        fi
         for f in ${created[@]+"${created[@]}"}; do rm -f -- "$f"; done
         if [ "$made_out_dir" -eq 1 ]; then rmdir out 2>/dev/null || true; fi
         echo "package-themes: failed; removed the files this run created" >&2
@@ -126,12 +134,16 @@ build() {
     # Publish with a hard link, not mv: ln checks and creates in one step and fails if
     # $dest exists, so a second run for the same version can never replace (and later
     # clean up) an archive another run published.
+    publishing_tmp="$tmp"
+    publishing_dest="$dest"
     if ! ln "$tmp" "$dest" 2>/dev/null; then
         [ -e "$dest" ] && die "$dest was created by another run while packaging; not overwriting it"
         die "could not publish $dest (out/ must be on a filesystem that supports hard links)"
     fi
     created+=("$dest")
     rm -f "$tmp"
+    publishing_tmp=""
+    publishing_dest=""
 }
 
 build "$source_zip" "${source_files[@]}"
